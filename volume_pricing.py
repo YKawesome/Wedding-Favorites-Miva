@@ -35,7 +35,7 @@ def _write_to_csv(header: list[str], rows: list[list[str]], filename: str) -> No
 
 def _cleanse_data(input_data: str) -> str:
     '''Cleanses the input data by removing unwanted characters'''
-    return input_data.replace('\r\n', '')
+    return input_data.replace('\r\n', '').replace('\\r\\n', '')
 
 
 def _fill_row(product_code: str, pricing_data: list[str]) -> list[str]:
@@ -74,5 +74,5 @@ __all__ = ['convert_and_write_to_csv', 'convert_to_miva']
 
 
 if __name__ == '__main__':
-    file = input('Enter the input file [test or actual]: ')
-    convert_and_write_to_csv(f'data/{file}_data.txt', 'output/output.csv')
+    # file = input('Enter the input file [test or actual]: ')
+    convert_and_write_to_csv('data/test_data.txt', 'output/output.csv')

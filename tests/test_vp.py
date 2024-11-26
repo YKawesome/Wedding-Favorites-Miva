@@ -1,6 +1,5 @@
 import unittest
-from ..volume_pricing import HIGHEST_BREAKPOINT, convert_to_miva, _cleanse_data, _fill_row, _fill_rows
-
+from volume_pricing import HIGHEST_BREAKPOINT, convert_to_miva, _cleanse_data, _fill_row, _fil_rows
 
 class TestVolumePricing(unittest.TestCase):
 
